@@ -13,7 +13,7 @@ namespace PathmaticTest
             //3. remove spaces and add all to hashset, as you add test if there are duplciates and output those.
             var lines = File.ReadAllLines(@"C:\Users\rajiv\Downloads\advertisers.txt");
             var filePath = @"C:\Users\rajiv\Downloads\advertisers.results.txt";
-            var threshold = .001;
+            var threshold = .003;
             var bg = new BagOfWords();
             List<string> normalizedNames = new List<string>();
             foreach (var line in lines)

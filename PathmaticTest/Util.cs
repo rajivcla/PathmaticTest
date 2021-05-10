@@ -10,13 +10,14 @@ namespace PathmaticTest
     public static class Util
     {
 
-
+        // Normalize string keeping on 0-9, a-z and spaces
         public static string NormalizeString(string str)
         {
             var normalized = Regex.Replace(str.ToLower(), "[^0-9a-z ]", String.Empty);
             return normalized;
         }
 
+        // Write duplicates to output file
         public static void FindDuplicates(string[] companyNames,List<string> normalized, HashSet<string> common, string path)
         {
             Dictionary<string,int> uniqueCompanies = new Dictionary<string,int>();
