@@ -10,7 +10,7 @@ namespace PathmaticTest
         {
             //1. Normalize strings
             //2. create bag of common words that need to be removed, ie llc, inc, com, co, corporation based on threshold
-            //3. remove spaces and add all to hashset, as you add test if there are duplciates and output those.
+            //3. remove spaces and add all to hashset, as you add them, test if there are duplicates and output those.
             var lines = File.ReadAllLines(@"C:\Users\rajiv\Downloads\advertisers.txt");
             var filePath = @"C:\Users\rajiv\Downloads\advertisers.results.txt";
             var threshold = .003;
@@ -25,7 +25,7 @@ namespace PathmaticTest
 
             Util.FindDuplicates(lines, normalizedNames, bg.GetMostCommonWords(threshold), filePath);
         }
-        // First algo I thought of but wouldn't be able to implement in 90 mins.
+        // This is the 1st algo I thought of but wouldn't be able to implement in 90 mins.
         //1. Remove common words w/ higher threshold (using above algo)
         //2. Convert string into a simple hash to get frequency distribution of characters as an int
         //3. Place characters into distribution histogram
